@@ -53,7 +53,7 @@
             100% { background-position: 0% 50%; }
         }
         
-        .username-notbigwhitething {
+        .username-n0tbigwhitething {
             background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
             background-size: 400% 400%;
             -webkit-background-clip: text;
@@ -462,12 +462,12 @@
                 .replace(/'/g, "&#039;");
         }
 
-        // --- HELPER: APPLY notbigwhitething STYLE ---
+        // --- HELPER: APPLY n0tbigwhitething STYLE ---
         function getStyledName(name) {
             if (!name) return "";
             const safeName = escapeHtml(name);
-            if (name.toLowerCase() === 'notbigwhitething') {
-                return `<span class="username-notbigwhitething">${safeName}</span>`;
+            if (name.toLowerCase() === 'n0tbigwhitething') {
+                return `<span class="username-n0tbigwhitething">${safeName}</span>`;
             }
             return safeName;
         }
@@ -674,7 +674,7 @@
                 currentUser.avatar = url; 
                 renderAvatar(dom.currentUserAvatar, currentUser.username, url);
                 
-                // Update styling if name is notbigwhitething
+                // Update styling if name is n0tbigwhitething
                 dom.currentUserName.innerHTML = getStyledName(currentUser.username);
                 
                 hideProfileModal();
@@ -872,7 +872,7 @@
             
             const avDiv = document.createElement('div'); avDiv.className = 'avatar'; renderAvatar(avDiv, chatName, chatAvatar);
             
-            // Apply notbigwhitething style to chat name if applicable
+            // Apply n0tbigwhitething style to chat name if applicable
             const styledChatName = getStyledName(chatName);
 
             // Determine preview text
@@ -987,7 +987,7 @@
 
             const time = msg.timestamp ? new Date(msg.timestamp.toDate()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) : '...';
             
-            // Check for notbigwhitething style in message sender
+            // Check for n0tbigwhitething style in message sender
             let senderHtml = '';
             if (!isMe && msg.senderName) {
                 senderHtml = `<span class="message-sender">${getStyledName(msg.senderName)}</span>`;
